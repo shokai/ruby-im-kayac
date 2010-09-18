@@ -1,6 +1,6 @@
 = im-kayac
 
-* http://github.com/shokai/im-kayac
+* http://github.com/shokai/ruby-im-kayac
 
 == DESCRIPTION:
 
