@@ -8,11 +8,12 @@ require 'json'
 
 module ImKayac
 
-  VERSION = '0.0.1'
+  VERSION = '0.0.3'
 
   def ImKayac.post(user, message, opts = {})
     uri = URI.parse("http://im.kayac.com/api/post/#{user}")
     params = {:message => URI.encode(message)}
+    opts = {} unless opts
 
     # http://im.kayac.com/#docs
     # keys of "opts" are [:handler, :password, :sig]
