@@ -8,7 +8,7 @@ require 'json'
 
 module ImKayac
 
-  VERSION = '0.0.3'
+  VERSION = '0.0.4'
 
   def ImKayac.post(user, message, opts = {})
     uri = URI.parse("http://im.kayac.com/api/post/#{user}")
@@ -38,7 +38,7 @@ module ImKayac
     return res
   end
 
-  class Error < Exception
+  class Error < StandardError
   end
 
 end

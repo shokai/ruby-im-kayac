@@ -1,3 +1,7 @@
+=== 0.0.4 2011-04-26
+
+* extend StandardError
+
 === 0.0.3 2010-09-19
 
 * fix for nil opts
