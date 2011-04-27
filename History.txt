@@ -1,3 +1,7 @@
+=== 0.0.5 2011-04-27
+
+* gem install json
+
 === 0.0.4 2011-04-26
 
 * extend StandardError

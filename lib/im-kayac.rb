@@ -8,7 +8,7 @@ require 'json'
 
 module ImKayac
 
-  VERSION = '0.0.4'
+  VERSION = '0.0.5'
 
   def ImKayac.post(user, message, opts = {})
     uri = URI.parse("http://im.kayac.com/api/post/#{user}")
