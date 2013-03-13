@@ -1,6 +1,6 @@
 im-kayac
 ========
-post message http://im.kayac.com
+rubygem for [im.kayac.com](http://im.kayac.com)
 
 * http://github.com/shokai/ruby-im-kayac
 
