@@ -14,21 +14,25 @@ Install
 
 Registration
 ------------
-please registrate on http://im.kayac.com/
+please registrate on http://im.kayac.com
 
 
 Usage
 -----
 
 ```ruby
-require 'rubygems'
 require 'im-kayac'
+ImKayac.to('username').post('hello world')
+```
 
-begin
-  p ImKayac.post("username", "hello world")
-rescue => e
-  STDERR.puts e
-end
+password
+```ruby
+ImKayac.to('username').password('your-password').post('hello')
+```
+
+secret key
+```ruby
+ImKayac.to('username').secret('your-key').post('hello')
 ```
 
 
