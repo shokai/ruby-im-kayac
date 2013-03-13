@@ -3,7 +3,8 @@ $:.unshift File.expand_path '../lib', File.dirname(__FILE__)
 require 'im-kayac'
 
 begin
-  p ImKayac.post("username", "hello world", {:password => 'your-password'})
+  res = ImKayac.post "username", "hello world", :password => 'your-password'
+  p res
 rescue => e
   STDERR.puts e
 end

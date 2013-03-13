@@ -7,7 +7,8 @@ message = 'hello world'
 sig = Digest::SHA1.hexdigest(message + 'your-sig')
 
 begin
-  p ImKayac.post("username", message, {:sig => sig})
+  res = ImKayac.post "username", message, :sig => sig
+  p res
 rescue => e
   STDERR.puts e
 end
