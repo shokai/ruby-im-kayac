@@ -2,12 +2,14 @@ PATH
   remote: .
   specs:
     im-kayac (0.1.0)
+      args_parser
       httparty
       json
 
 GEM
   remote: https://rubygems.org/
   specs:
+    args_parser (0.1.4)
     httparty (0.10.2)
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)

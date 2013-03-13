@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+$:.unshift File.expand_path '../lib', File.dirname(__FILE__)
+require 'args_parser'
+require 'im-kayac'
+
+parser = ArgsParser.parse ARGV do
+  arg :to, 'message to', :alias => :t
+  arg :password, 'password auth', :alias => :p
+  arg :secret, 'secret key auth', :alias => :s
+  arg :version, 'show version', :alias => :v
+  arg :help, 'show help', :alias => :h
+end
+
+if parser.has_option? :version
+  puts "im-kayac v#{ImKayac::VERSION}"
+  exit
+end
+
+if parser.has_option? :help or !parser.has_param? :to  or parser.argv.empty?
+  STDERR.puts parser.help
+  STDERR.puts
+  STDERR.puts "e.g."
+  STDERR.puts %q{  im-kayac --to USER_NAME "hello world"}
+  STDERR.puts %q{  im-kayac --to USER_NAME --password YOUR_PASS "hello password"}
+  STDERR.puts %q{  im-kayac --to USER_NAME --secret YOUR_KEY "hello secret key"}
+  exit 1
+end
+
+im = ImKayac.to(parser[:to])
+if parser.has_param? :password
+  im.password parser[:password]
+elsif parser.has_param? :secret
+  im.secret parser[:secret]
+end
+im.post parser.argv.join ''
