@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.version       = ImKayac::VERSION
   gem.authors       = ["Sho Hashimoto"]
   gem.email         = ["hashimoto@shokai.org"]
-  gem.description   = %q{post message http://im.kayac.com/}
+  gem.description   = %q{post message http://im.kayac.com}
   gem.summary       = gem.description
   gem.homepage      = "https://github.com/shokai/ruby-im-kayac"
 
