@@ -16,8 +16,15 @@ Registration
 please registrate on http://im.kayac.com
 
 
-Usage
------
+im-kayac command
+----------------
+
+    % im-kayac --help
+    % im-kayac --to USER_NAME "hello world"
+
+
+Gem Usage
+---------
 
 ```ruby
 require 'im-kayac'
