@@ -1,3 +1,8 @@
+=== 0.1.2 2013-05-02
+
+* add handler option for iPhone's custom URL Scheme
+  * thank you for contributing @june29
+
 === 0.1.1 2013-03-14
 
 * add im-kayac command
