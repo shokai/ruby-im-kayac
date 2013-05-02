@@ -8,6 +8,7 @@ parser = ArgsParser.parse ARGV do
   arg :to, 'message to', :alias => :t
   arg :password, 'password auth', :alias => :p
   arg :secret, 'secret key auth', :alias => :s
+  arg :handler, 'iPhone URL Scheme Handler'
   arg :version, 'show version', :alias => :v
   arg :help, 'show help', :alias => :h
 end
@@ -33,4 +34,6 @@ if parser.has_param? :password
 elsif parser.has_param? :secret
   im.secret parser[:secret]
 end
+im.handler parser[:handler] if parser.has_param? :handler
+
 im.post parser.argv.join ''
