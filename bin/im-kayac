@@ -18,13 +18,14 @@ if parser.has_option? :version
   exit
 end
 
-if parser.has_option? :help or !parser.has_param? :to  or parser.argv.empty?
+if parser.has_option? :help or !parser.has_param? :to or parser.argv.empty?
   STDERR.puts parser.help
   STDERR.puts
   STDERR.puts "e.g."
   STDERR.puts %q{  im-kayac --to USER_NAME "hello world"}
   STDERR.puts %q{  im-kayac --to USER_NAME --password YOUR_PASS "hello password"}
   STDERR.puts %q{  im-kayac --to USER_NAME --secret YOUR_KEY "hello secret key"}
+  STDERR.puts %q{  im-kayac --to USER_NAME --handler twitter://twitter.com/shokai "open twitter"}
   exit 1
 end
 
