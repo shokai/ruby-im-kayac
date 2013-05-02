@@ -43,7 +43,7 @@ ImKayac.to('username').secret('your-key').post('hello')
 
 iPhone URL Scheme Handler
 ```ruby
-ImKayac.to('username').handler('tweetie://').post('hello')
+ImKayac.to('username').handler('twitter://twitter.com/shokai').post('he is')  # => open twitter
 ImKayac.to('username').handler('mailto:example@example.com').post('hello')
 ```
 
