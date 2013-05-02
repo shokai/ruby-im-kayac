@@ -41,6 +41,12 @@ secret key
 ImKayac.to('username').secret('your-key').post('hello')
 ```
 
+iPhone URL Scheme Handler
+```ruby
+ImKayac.to('username').handler('tweetie://').post('hello')
+ImKayac.to('username').handler('mailto:example@example.com').post('hello')
+```
+
 
 Sample
 ------
